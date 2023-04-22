@@ -1,7 +1,7 @@
 node {
  def app
   stage("Clone"){
-   checksum scm
+   checkout scm
   }
   stage('Build image'){
    app = docker.build("oufimed/nginx")
